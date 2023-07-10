@@ -103,6 +103,20 @@ namespace Expert_System_2.Graph
                         }
                         result_dictionary_list = temporary_dictionary_list;
                         temporary_dictionary_list = null;
+                    //    result_dictionary_list.AddRange(edgest_list_dictionary);
+                    //    foreach (var result_dictionary in result_dictionary_list)
+                    //    {
+                    //        foreach (var edgest_dictionary in edgest_list_dictionary)
+                    //        {
+                    //            foreach (var dictionary_key_value in edgest_dictionary)
+                    //            {
+                    //                if (!result_dictionary.ContainsKey(dictionary_key_value.Key))
+                    //                {
+                    //                    result_dictionary.Add(dictionary_key_value.Key, dictionary_key_value.Value);
+                    //                }
+                    //            }
+                    //        }
+                    //    }
                     }
                 }
             }
@@ -130,6 +144,7 @@ namespace Expert_System_2.Graph
             }
             return result_dictionary_list;
         }
+
         public Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> Checking_Rules_Question
             (Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> input_tuple, IGraphVertex upper_edge)
         {

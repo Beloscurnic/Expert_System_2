@@ -127,6 +127,18 @@ namespace Expert_System_2.Graph
             return result_dictionary_list;
         }
 
+        public Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> Mapping
+    (Dictionary<IGrapgFacts, string> dictionary, List<IGraphVertex> list_vertex, Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> input_tuple1)
+        {
+            foreach (var rule in dictionary)
+            {
+                input_tuple1.Item1.Add(rule.Key, rule.Value);
+            }
+            input_tuple1.Item2.AddRange(list_vertex);
+
+            return input_tuple1;
+        }
+
         public Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> Checking_Rules_Question
         (Tuple<Dictionary<IGrapgFacts, string>, List<IGraphVertex>, bool> input_tuple, IGraphVertex upper_edge)
         {
@@ -164,9 +176,9 @@ namespace Expert_System_2.Graph
                             {
                                 flag = false;
                                 break;
-                            }
                         }
                     }
+                }
                 }
                 if (Vertex != null)
                 {

@@ -14,7 +14,14 @@
             Description = description;
             Value_list = value_list;
         }
-       
+        public Selection_Question(string value, string category_name, string description, List<string> value_list)
+        {
+            Value = value;
+            Category_Name = category_name;
+            Description = description;
+            Value_list = value_list;
+        }
+
         public string Ask_Question()
         {
             string? nambur_value;

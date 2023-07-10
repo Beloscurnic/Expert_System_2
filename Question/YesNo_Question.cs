@@ -20,6 +20,12 @@ namespace Expert_System_2.Question
             Description = description;
         }
 
+        public YesNo_Question(string value, string category_name, string description)
+        {
+            Value = value;
+            Category_Name=category_name;
+            Description = description;     
+        }
         public string Ask_Question()
         {
             Console.WriteLine(Description);
